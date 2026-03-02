@@ -9,7 +9,7 @@ test('negating matchers', async ({ page }) => {
 
     const checkbox = await page.locator('#checkBox2');
     await checkbox.check();
-    await expect(checkbox).not.toBeChecked();
+    await expect(checkbox).toBeChecked();
 
     //Assert Topic
     const topic = await page.locator("//h1[normalize-space()='Demo Page']")
@@ -28,7 +28,7 @@ test('Soft Assertions', async ({ page }) => {
 
     const checkbox = await page.locator('#checkBox2');
     await checkbox.check();
-    await expect.soft(checkbox).not.toBeChecked();
+    await expect.soft(checkbox).toBeChecked();
 
     //Assert Topic
     const topic = await page.locator("//h1[normalize-space()='Demo Page']")

@@ -13,7 +13,6 @@ test.describe('both tests', () => {
     
         await expect(seq).toHaveValue(/Australia/);
         
-        await page.pause();
     })
     
     test('Auto complete Test 2', async({page})=>{

@@ -1,7 +1,7 @@
 const {test, expect} = require("@playwright/test");
 
 test('Handling Select Based dropdown', async ({page})=>{
-    await page.goto('https://saucedemo.com/');
+    await page.goto('https://saucedemo.com/', { waitUntil: 'networkidle' });
 
     await page.locator('//*[contains(@placeholder, "User")]').type('standard_user');
 
@@ -10,7 +10,5 @@ test('Handling Select Based dropdown', async ({page})=>{
     await page.locator('#login-button').click();
 
     await page.locator('.product_sort_container').selectOption({index : 2})
-
-    await page.pause();
 
 })

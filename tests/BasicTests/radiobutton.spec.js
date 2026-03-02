@@ -2,14 +2,14 @@ import {test,expect} from '@playwright/test';
 
 test('Hnadling radiobutton', async ({ page }) => {
 
-    await page.goto('https://demoqa.com/automation-practice-form');
+    await page.goto('https://demoqa.com/automation-practice-form', { waitUntil: 'networkidle' });
     
 
 });
 
 test('Hnadling checkboxes', async ({ page }) => {
 
-    await page.goto('https://demoqa.com/');
+    await page.goto('https://demoqa.com/', { waitUntil: 'networkidle' });
     await page.getByRole('link', { name: 'Forms' }).click();
     await page.getByRole('link', { name: 'Practice Form' }).click();
     // const formsLink = page.getByText('Forms');

@@ -3,7 +3,7 @@
 import { test, expect } from '@playwright/test'
 
 test('Test Broken Images', async ({ page }) => {
-    await page.goto('https://the-internet.herokuapp.com/broken_images');
+    await page.goto('https://the-internet.herokuapp.com/broken_images', { waitUntil: 'networkidle' });
 
     //Enable network interception
     await page.route('**/*', (route) => {

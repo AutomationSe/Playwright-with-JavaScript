@@ -13,7 +13,7 @@ test('API Mocking Test', async ({ page }) => {
 
         })
 
-    await page.goto("https://demo.playwright.dev/api-mocking");
+    await page.goto("https://demo.playwright.dev/api-mocking", { waitUntil: 'networkidle' });
 
     await expect(page.locator("(//li[normalize-space()='Apple'])")).toHaveText("Apple");
 });
