@@ -4,6 +4,7 @@
 import {test, expect} from '@playwright/test';
 
 test('test', async ({ page }) => {
+    let check
 
     await page.goto('https://seleniumbase.io/demo_page', {waitUntil: 'domcontentloaded'})
 
