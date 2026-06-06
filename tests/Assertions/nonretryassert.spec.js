@@ -3,7 +3,7 @@
 
 import { test, expect } from '@playwright/test';
 
-test('non retry assertion', async ({ page }) => {
+test('non retry assertion two', async ({ page }) => {
     await page.goto('https://seleniumbase.io/demo_page', { waitUntil: 'domcontentloaded' })
     
     const title = await page.title();
